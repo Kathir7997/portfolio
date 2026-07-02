@@ -260,11 +260,12 @@
                 </div>
                 <div class="glass-panel">
                     <h3 style="color: var(--neon-green); margin-bottom: 20px; font-family: var(--font-mono);">> SEND_TRANSMISSION</h3>
-                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                        <input type="text" placeholder="Designation (Name)" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
-                        <input type="email" placeholder="Return Frequency (Email)" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
-                        <textarea placeholder="Data Payload (Message)" rows="5" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono); resize: none;"></textarea>
-                        <button type="button" class="cyber-btn" style="align-self: flex-start; margin-top: 10px;">Transmit</button>
+                    <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" id="contact-name" placeholder="Designation (Name)" required style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
+                        <input type="email" id="contact-email" placeholder="Return Frequency (Email)" required style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
+                        <textarea id="contact-message" placeholder="Data Payload (Message)" required rows="5" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono); resize: none;"></textarea>
+                        <button type="submit" id="transmit-btn" class="cyber-btn" style="align-self: flex-start; margin-top: 10px;">Transmit</button>
+                        <div id="transmission-log" style="font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.4; display: none; margin-top: 10px;"></div>
                     </form>
                 </div>
             </div>
