@@ -3,190 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathirvel - Portfolio</title>
+    <title>KATHIRVEL | System Active</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header>
-        <nav>
-            <div class="logo"><img src="./images/logo.jpg" alt="Kathirvel" id="logo-photo"></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Kathirvel</h1>
-            <h2>Full-Stack Developer & EEE Student</h2>
-            <p>Building digital experiences with MERN Stack</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
+    <!-- Background Canvases -->
+    <canvas id="city-canvas"></canvas>
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Loading Sequence & Black Hole Transition -->
+    <div id="loading-screen">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="terminal-loader" id="terminal-loader">
+            <!-- Content injected by JS -->
         </div>
-    </section>
+    </div>
+    <canvas id="blackhole-canvas"></canvas>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="profile-img">
-                    <img src="./images/kathir.jpg" alt="Kathirvel" id="profile-photo">
+    <!-- Dyson Sphere Hub (Three.js) -->
+    <div id="dyson-container"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="Logo" style="width: 30px; height: 30px; border-radius: 50%;">
+            KATHIRVEL<span>.SYS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content wrapper (hidden initially) -->
+    <main id="main-content" style="opacity: 0; display: none;">
+        
+        <!-- Hero (Replaced by Boot Sequence, but kept for semantic structure) -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>KATHIRVEL</h1>
+                <h2>FULL-STACK DEVELOPER & EEE STUDENT</h2>
+                <p>Building digital experiences with MERN Stack. Welcome to my digital universe.</p>
+                <a href="#projects" class="cyber-btn">Initialize Experience</a>
+            </div>
+        </section>
+
+        <!-- About Section (AI Lab) -->
+        <section id="about">
+            <div class="section-header">
+                <h2 data-text="AI_LABORATORY">AI_LABORATORY</h2>
+            </div>
+            <div class="about-grid">
+                <div class="hologram-profile glass-panel">
+                    <div class="scan-line"></div>
+                    <img src="./images/kathir.jpg" alt="Kathirvel">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number">03</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">MERN</div>
+                            <div class="stat-label">Stack</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="social-icons">
-                    <a href="https://github.com/kathirveld641659-create" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/kathirvel-duraisamy-292005301" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:kathirveld641659@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+919789399503"><i class="fas fa-phone"></i></a>
+                <div class="bio-content glass-panel">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid rgba(0, 255, 136, 0.2); padding-bottom: 15px;">
+                        <h3 style="color: var(--neon-green); font-family: var(--font-mono); margin: 0;">> USER_PROFILE_LOADED</h3>
+                        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--electric-cyan); letter-spacing: 2px;">STATUS: ONLINE</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 400; margin-bottom: 15px;">
+                        I am an innovative Full-Stack Developer and Electrical Engineering student at Sri Shakthi Institute of Engineering and Technology. 
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 30px; line-height: 1.8;">
+                        By integrating complex engineering logic with cutting-edge web technologies, I architect scalable, user-centric MERN stack applications. My hybrid background enables me to solve intricate problems with precision, bridging the gap between hardware systems and digital interfaces to deliver premium digital experiences.
+                    </p>
+                    
+                    <div class="core-nodes-grid">
+                        <div>
+                            <h4 style="color: var(--electric-cyan); margin-bottom: 15px; font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 1px;">> CORE_DIRECTIVES</h4>
+                            <ul style="display: flex; flex-direction: column; gap: 12px; font-family: var(--font-mono); font-size: 0.9rem;">
+                                <li style="display: flex; align-items: center;"><i class="fas fa-code" style="color: var(--neon-green); width: 25px;"></i> Web Architecture</li>
+                                <li style="display: flex; align-items: center;"><i class="fas fa-database" style="color: var(--purple); width: 25px;"></i> System Design</li>
+                                <li style="display: flex; align-items: center;"><i class="fas fa-microchip" style="color: var(--electric-cyan); width: 25px;"></i> Embedded Systems</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--electric-cyan); margin-bottom: 15px; font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 1px;">> NETWORK_NODES</h4>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <a href="https://github.com/Kathir7997" target="_blank" class="social-node">
+                                    <i class="fab fa-github" style="width: 20px;"></i> GitHub Protocol
+                                </a>
+                                <a href="https://www.linkedin.com/in/kathirvel-duraisamy-292005301" target="_blank" class="social-node">
+                                    <i class="fab fa-linkedin" style="width: 20px;"></i> LinkedIn Node
+                                </a>
+                                <a href="https://leetcode.com/u/KathirvelD/" target="_blank" class="social-node">
+                                    <i class="fas fa-code-branch" style="width: 20px;"></i> LeetCode Matrix
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="about-text">
-                <div class="bio">
-                    <h3>Who I Am</h3>
-                    <p>I am a passionate and versatile engineering student at Sri Shakthi Institute of Engineering and Technology, where I'm pursuing my B.E. in Electrical and Electronic Engineering. My journey is unique as I blend traditional engineering principles with modern web development, creating a powerful combination of technical knowledge.</p>
-                    
-                    <p>As a full-stack developer, I specialize in the MERN (MongoDB, Express.js, React.js, Node.js) stack, building responsive and user-friendly web applications. My engineering background gives me a structured approach to problem-solving and system design.</p>
-                </div>
+        </section>
 
-                <div class="interests">
-                    <h3>What I Love</h3>
-                    <ul>
-                        <li><i class="fas fa-camera"></i> Photography & Videography</li>
-                        <li><i class="fas fa-code"></i> Web Development</li>
-                        <li><i class="fas fa-bolt text-blue"></i> Electrical system</li>
-                        <li><i class="fas fa-microchip"></i> Electronic Systems</li>
-                        <li><i class="fas fa-video"></i> Video Editing</li>
-                        
-                    </ul>
+        <!-- Skills Section (Matrix Terminal) -->
+        <section id="skills">
+            <div class="section-header">
+                <h2 data-text="SYSTEM_CAPABILITIES">SYSTEM_CAPABILITIES</h2>
+            </div>
+            <div class="glass-panel" style="max-width: 1000px; margin: 0 auto;">
+                <div class="terminal-header">
+                    <div class="terminal-btn close"></div>
+                    <div class="terminal-btn min"></div>
+                    <div class="terminal-btn max"></div>
+                    <span style="color: var(--text-secondary); margin-left: 15px; font-size: 0.9rem;">root@kathirvel:~# ./load_skills.sh</span>
                 </div>
+                <div class="skills-grid" id="skills-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+        </section>
 
-                <div class="education">
-                    <h3>Education</h3>
-                    <div class="education-item">
-                        <h4>B.E. Electrical and Electronic Engineering</h4>
-                        <p>Sri Shakthi Institute of Engineering and Technology</p>
-                        <p class="duration">2023 - 2027</p>
-                        <h4>Schooling</h4>
-                        <p> Kongu Vellelar Matriculation Higher Secondary School</p>
-                        <p class="duration">2023</p>
+        <!-- Projects Section (Holographic Pods) -->
+        <section id="projects">
+            <div class="section-header">
+                <h2 data-text="ACTIVE_PROJECTS">ACTIVE_PROJECTS</h2>
+            </div>
+            <div class="projects-grid">
+                
+                <div class="project-pod">
+                    <div class="pod-inner">
+                        <h3 class="pod-title">Agricart</h3>
+                        <p class="pod-desc">A fully functional platform designed to empower farmers by allowing them to sell their produce directly to consumers.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <div class="pod-links">
+                            <a href="https://project1-kappa-steel.vercel.app" class="pod-link" target="_blank"><i class="fas fa-external-link-alt"></i> Launch</a>
+                            <a href="https://github.com/Kathir7997/project1" class="pod-link" target="_blank"><i class="fab fa-github"></i> Source</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="achievements">
-                    <h3>Key Achievements</h3>
-                    <ul>
-                        <li>Developed multiple full-stack web applications</li>
-                        <li>Created professional video content for college events</li>
-                        <li>Active participant in technical workshops and hackathons</li>
-                    </ul>
+                <div class="project-pod">
+                    <div class="pod-inner">
+                        <h3 class="pod-title">Aqua Bot</h3>
+                        <p class="pod-desc">An automated robotic system that detects spilled water or fluids on the floor and initiates a cleaning protocol.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Hardware</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">C++</span>
+                        </div>
+                        <div class="pod-links">
+                            <a href="#" class="pod-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2 class="section-title">My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js</li>
-                    <li>Responsive Design</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <ul>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MongoDB</li>
-                    <li>RESTful APIs</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Others</h3>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>VS Code</li>
-                    <li>Command Line</li>
-                    <li>Fast Understanding</li>
-                    <li>Videography</li>
-                    <li>Photography</li>
-                    <li>Premiere Pro</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+                <div class="project-pod">
+                    <div class="pod-inner">
+                        <h3 class="pod-title">Solar Switching EV</h3>
+                        <p class="pod-desc">A fully automated solar-powered electric vehicle system that intelligently switches between solar energy and battery power when charge levels are low.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Electrical Design</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Power Systems</span>
+                        </div>
+                        <div class="pod-links">
+                            <a href="#" class="pod-link"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Farm Cart</h3>
-                <p>A fully functional website which is used by the farmer to sale ther product</p>
-                <div class="project-links">
-                    <a href="#" class="btn">View Project</a>
-                </div>
             </div>
-            <div class="project-card">
-                <h3>Aqua Bot</h3>
-                <p>A bot to clean the floor when the water is spilled or any fluid is detected</p>
-                <div class="project-links">
-                    <a href="#" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Solar Switching EV</h3>
-                <p>A fully automated solar-powered electric vehicle which will switch between solar and battery when the battery is low</p>
-                <div class="project-links">
-                    <a href="#" class="btn">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:kathirveld641659@gmail.com">kathirveld641659@gmail.com</a>
+        <!-- Experience Section (Mission Control) -->
+        <section id="experience">
+            <div class="section-header">
+                <h2 data-text="MISSION_LOGS">MISSION_LOGS</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2027</div>
+                        <h3 style="color: var(--neon-green); margin-bottom: 5px;">B.E. Electrical & Electronic Eng.</h3>
+                        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">Sri Shakthi Institute of Engineering and Technology</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/kathirveld641659-create">github.com/kathirveld641659-create</a>
+                <div class="timeline-entry">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023</div>
+                        <h3 style="color: var(--electric-cyan); margin-bottom: 5px;">Higher Secondary Education</h3>
+                        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">Kongu Vellelar Matriculation Higher Secondary School</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/kathirvel-duraisamy-292005301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">linkedin.com/in/KATHIRVEL DURAISAMY</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+919789399503">+91 9789399503</a>
+                <div class="timeline-entry">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Present</div>
+                        <h3 style="color: var(--purple); margin-bottom: 5px;">Full-Stack Development</h3>
+                        <p style="color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.9rem;">Developing web apps, participating in hackathons, and continuous learning.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Kathirvel. All rights reserved.</p>
-    </footer>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="section-header">
+                <h2 data-text="ESTABLISH_CONNECTION">ESTABLISH_CONNECTION</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-text">
+                            <h4>Encrypted Comms</h4>
+                            <a href="mailto:kathirveld641659@gmail.com">kathirveld641659@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div class="contact-text">
+                            <h4>Direct Line</h4>
+                            <a href="tel:+919789399503">+91 9789399503</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github contact-icon"></i>
+                        <div class="contact-text">
+                            <h4>Source Code Repository</h4>
+                            <a href="https://github.com/kathirveld641659-create" target="_blank">github.com/kathirveld641659-create</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <div class="contact-text">
+                            <h4>Professional Network</h4>
+                            <a href="https://www.linkedin.com/in/kathirvel-duraisamy-292005301" target="_blank">linkedin.com/in/kathirvel-duraisamy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel">
+                    <h3 style="color: var(--neon-green); margin-bottom: 20px; font-family: var(--font-mono);">> SEND_TRANSMISSION</h3>
+                    <form style="display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" placeholder="Designation (Name)" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
+                        <input type="email" placeholder="Return Frequency (Email)" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono);">
+                        <textarea placeholder="Data Payload (Message)" rows="5" style="padding: 15px; background: rgba(0,0,0,0.5); border: 1px solid var(--electric-cyan); color: white; border-radius: 5px; font-family: var(--font-mono); resize: none;"></textarea>
+                        <button type="button" class="cyber-btn" style="align-self: flex-start; margin-top: 10px;">Transmit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>SYSTEM OF KATHIRVEL &copy; 2035. ALL DIRECTIVES ACKNOWLEDGED.</p>
+        </footer>
+
+    </main>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="./js/matrix.js"></script>
+    <script src="./js/blackhole.js"></script>
+    <script src="./js/loading.js"></script>
+    <script src="./js/city.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/cursor.js"></script>
+    <script src="./js/dyson-sphere.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
